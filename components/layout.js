@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // 有辦法 disable CSS Module
-// https://stackoverflow.com/questions/67934463/how-to-turn-off-css-module-feature-in-next-js
+// https://cwtuan.blogspot.com/2022/10/disable-css-module-in-nextjs-v1231-sept.html
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 
