@@ -1,3 +1,8 @@
+// 現在專案如果要轉成用 Next.js 會遇到的問題
+// 1. Route
+// 2. CSS
+// 3. Webpack
+
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 
