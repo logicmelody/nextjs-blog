@@ -11,12 +11,15 @@ import { getSortedPostsData } from '../lib/posts';
 import utilStyles from '../styles/utils.module.css';
 
 const defaultProps = {
+	title: '',
 	allPostsData: [],
 };
 
 function Home({
+	title,
 	allPostsData,
 }) {
+	console.log('title', title);
 	console.log('allPostsData', allPostsData);
 
 	return (
@@ -58,6 +61,7 @@ async function getStaticProps() {
 
 	return {
 		props: {
+			title: 'Home',
 			allPostsData,
 		},
 	};
