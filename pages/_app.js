@@ -1,4 +1,4 @@
-import SidebarMenu from '../components/sidebar-menu';
+import LayoutRoute from '../page-components/layout-route';
 
 /*
 根據官方文件:
@@ -9,8 +9,8 @@ import '../styles/global.css';
 
 export default function App({ Component, pageProps }) {
 	return (
-		<SidebarMenu>
+		<LayoutRoute>
 			<Component {...pageProps} />
-		</SidebarMenu>
+		</LayoutRoute>
 	);
 }
