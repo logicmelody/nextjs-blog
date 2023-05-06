@@ -1,9 +1,11 @@
+import LoginTitle from '../../page-components/login/login-title';
+
 import styles from './login.module.css';
 
 function LoginPage() {
 	return (
 		<div className={styles.container}>
-			Login Page
+			<LoginTitle />
 		</div>
 	);
 }
