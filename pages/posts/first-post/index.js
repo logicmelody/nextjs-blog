@@ -4,7 +4,7 @@ import Script from 'next/script';
 
 import Layout from '../../../components/layout';
 
-import style from './style.module.css';
+import style from './first-post.module.css';
 
 export default function FirstPost() {
 	return (

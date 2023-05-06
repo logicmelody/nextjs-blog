@@ -8,7 +8,7 @@ import {
 	getPostData,
 } from '../../../lib/posts';
 
-import styles from './style.module.css';
+import styles from './[id].module.css';
 import utilStyles from '../../../styles/utils.module.css';
 
 export default function Post({ postData }) {
