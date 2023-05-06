@@ -12,14 +12,9 @@ import { getSortedPostsData } from '../lib/posts';
 
 import utilStyles from '../styles/utils.module.css';
 
-const defaultProps = {
-	title: '',
-	allPostsData: [],
-};
-
 function Home({
-	title,
-	allPostsData,
+	title = '',
+	allPostsData = [],
 }) {
 	console.log('title', title);
 	console.log('allPostsData', allPostsData);
@@ -52,11 +47,13 @@ function Home({
 					))}
 				</ul>
 			</section>
+
+			<Link href={`/login`}>
+				Login
+			</Link>
 		</Layout>
 	);
 }
-
-Home.defaultProps = defaultProps;
 
 async function getStaticProps() {
 	const allPostsData = getSortedPostsData();

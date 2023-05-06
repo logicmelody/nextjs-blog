@@ -6,15 +6,15 @@ import {
 import SidebarMenu from '../../components/sidebar-menu';
 
 function LayoutRoute({ children }) {
-	const [isAuthed, setIsAuthed] = useState(false);
+	const [isAuthed, setIsAuthed] = useState(true);
 
-	useEffect(() => {
-		setTimeout(() => {
-			setIsAuthed(true);
+	// useEffect(() => {
+	// 	setTimeout(() => {
+	// 		setIsAuthed(true);
 
-		}, 3000);
+	// 	}, 3000);
 
-	}, []);
+	// }, []);
 
 	function _renderPublicLayout() {
 		return (

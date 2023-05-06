@@ -9,9 +9,15 @@ import '../styles/global.css';
 
 // <Component {...pageProps} /> 可以看成 {renderSwitches(routes)}
 export default function App({ Component, pageProps }) {
+	const ComponentElement = <Component {...pageProps} />;
+
+	if (Component.getLayout) {
+		return Component.getLayout(ComponentElement);
+	}
+
 	return (
 		<LayoutRoute>
-			<Component {...pageProps} />
+			{ComponentElement}
 		</LayoutRoute>
 	);
 }
