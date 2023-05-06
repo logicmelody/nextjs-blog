@@ -2,7 +2,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Script from 'next/script';
 
-import Layout from '../../components/layout';
+import Layout from '../../../components/layout';
+
+import style from './style.module.css';
 
 export default function FirstPost() {
 	return (
@@ -20,7 +22,7 @@ export default function FirstPost() {
 				}
 			/>
 
-			<h1>First Post</h1>
+			<h1 className={style.title}>First Post</h1>
 
 			<h2>
 				<Link href='/'>Back to home</Link>
