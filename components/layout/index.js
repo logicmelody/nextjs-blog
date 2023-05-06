@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 // 有辦法 disable CSS Module
 // https://cwtuan.blogspot.com/2022/10/disable-css-module-in-nextjs-v1231-sept.html
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
+import styles from './style.module.css';
+import utilStyles from '../../styles/utils.module.css';
 
 const name = 'Your Name';
 export const siteTitle = 'Next.js Sample Website';
