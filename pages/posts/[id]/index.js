@@ -11,7 +11,7 @@ import {
 import styles from './[id].module.css';
 import utilStyles from '../../../styles/utils.module.css';
 
-export default function Post({ postData }) {
+export default function PostPage({ postData }) {
 	return (
 		<Layout>
 			<Head>

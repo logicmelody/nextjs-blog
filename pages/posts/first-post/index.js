@@ -6,7 +6,7 @@ import Layout from '../../../components/layout';
 
 import style from './first-post.module.css';
 
-export default function FirstPost() {
+export default function FirstPostPage() {
 	return (
 		<Layout>
 			<Head>

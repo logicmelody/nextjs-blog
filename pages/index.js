@@ -12,7 +12,7 @@ import { getSortedPostsData } from '../lib/posts';
 
 import utilStyles from '../styles/utils.module.css';
 
-function Home({
+function HomePage({
 	title = '',
 	allPostsData = [],
 }) {
@@ -60,13 +60,13 @@ async function getStaticProps() {
 
 	return {
 		props: {
-			title: 'Home',
+			title: 'HomePage',
 			allPostsData,
 		},
 	};
 }
 
-export default Home;
+export default HomePage;
 export {
 	getStaticProps,
 };

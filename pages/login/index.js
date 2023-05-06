@@ -1,6 +1,6 @@
 import styles from './login.module.css';
 
-function Login() {
+function LoginPage() {
 	return (
 		<div className={styles.container}>
 			Login Page
@@ -8,8 +8,8 @@ function Login() {
 	);
 }
 
-Login.getLayout = function getLayout(page) {
+LoginPage.getLayout = function getLayout(page) {
 	return page;
 }
 
-export default Login;
+export default LoginPage;
