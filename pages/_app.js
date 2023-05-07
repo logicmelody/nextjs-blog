@@ -9,7 +9,14 @@ import '../styles/global.css';
 
 // <Component {...pageProps} /> 可以看成 {renderSwitches(routes)}
 export default function App({ Component, pageProps }) {
-	const ComponentElement = <Component {...pageProps} />;
+	const ComponentElement = (
+		<Component
+			{...pageProps}
+			onNavigate={() => {
+				console.log('onNavigate');
+			}}
+		/>
+	);
 
 	if (Component.getLayout) {
 		return Component.getLayout(ComponentElement);

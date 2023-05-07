@@ -7,9 +7,10 @@ import Layout from '../../../components/layout';
 
 import style from './first-post.module.css';
 
-export default function FirstPostPage() {
+export default function FirstPostPage(props) {
 	const router = useRouter();
 
+	console.log('FirstPostPage props', props);
 	console.log('FirstPostPage router', router);
 
 	return (
