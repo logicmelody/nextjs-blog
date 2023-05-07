@@ -13,5 +13,6 @@ function LoginPage() {
 LoginPage.getLayout = function getLayout(page) {
 	return page;
 }
+LoginPage.isFullPage = true;
 
 export default LoginPage;

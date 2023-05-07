@@ -14,6 +14,8 @@ pageProps is an object with the initial props that were preloaded for your page 
 */
 // <Component {...pageProps} /> 可以看成 {renderSwitches(routes)}
 export default function App({ Component, pageProps }) {
+	console.log('App Component', Component);
+
 	const ComponentElement = (
 		<Component
 			{...pageProps}
@@ -23,7 +25,7 @@ export default function App({ Component, pageProps }) {
 		/>
 	);
 
-	if (Component.getLayout) {
+	if (Component.isFullPage) {
 		return Component.getLayout(ComponentElement);
 	}
 
