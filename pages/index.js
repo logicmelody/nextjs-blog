@@ -1,10 +1,7 @@
-// 現在專案如果要轉成用 Next.js 會遇到的問題
-// 1. Route
-// 2. CSS
-// 3. Webpack
-
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+
 import Layout, { siteTitle } from '../components/layout';
 import Date from '../components/date';
 
@@ -16,6 +13,8 @@ function HomePage({
 	title = '',
 	allPostsData = [],
 }) {
+	const router = useRouter();
+
 	console.log('title', title);
 	console.log('allPostsData', allPostsData);
 
@@ -48,14 +47,55 @@ function HomePage({
 				</ul>
 			</section>
 
-			<Link href={`/login`}>
+			<h2>
+				Buttons
+			</h2>
+
+			<button onClick={() => {
+				router.push({
+					pathname: '/posts/first-post',
+
+					// 需要用 query object 來傳 data 到下一個 page
+					query: { 
+						id: 100,
+						hasTab: true,
+						title: 'First Post from Home',
+					},
+				});
+			}}>
+				Go to First-Post with some props
+			</button>
+
+			<h2>
+				Links
+			</h2>
+
+			{/* Any <Link /> in the viewport (initially or through scroll) will be prefetched by default (including the corresponding data) for pages using Static Generation. */}
+			<Link href='/login'>
 				Login
 			</Link>
 
 			<br />
 
-			<Link href={`/third-party`}>
+			<Link href='/third-party'>
 				Third Party
+			</Link>
+
+			<br />
+
+			<Link href={`/third-party/${1}/${2}/${3}`}>
+				Third Party 1/2/3
+			</Link>
+
+			<br />
+
+			<Link
+				href={{
+					pathname: '/third-party/[...id]',
+					query: { id: ['99', '100'] },
+				}}
+			>
+				Third Party with query 99/100
 			</Link>
 		</Layout>
 	);

@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -7,6 +8,10 @@ import Layout from '../../../components/layout';
 import style from './first-post.module.css';
 
 export default function FirstPostPage() {
+	const router = useRouter();
+
+	console.log('FirstPostPage router', router);
+
 	return (
 		<Layout>
 			<Head>
