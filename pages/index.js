@@ -51,6 +51,12 @@ function HomePage({
 			<Link href={`/login`}>
 				Login
 			</Link>
+
+			<br />
+
+			<Link href={`/third-party`}>
+				Third Party
+			</Link>
 		</Layout>
 	);
 }

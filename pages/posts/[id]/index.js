@@ -9,7 +9,7 @@ import {
 	getPostData,
 } from '../../../lib/posts';
 
-import styles from './[id].module.css';
+import styles from './posts.module.css';
 import utilStyles from '../../../styles/utils.module.css';
 
 export default function PostPage({ postData }) {
