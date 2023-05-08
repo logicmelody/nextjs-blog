@@ -11,7 +11,7 @@ export default function FirstPostPage(props) {
 	const router = useRouter();
 
 	const {
-		id,
+		type,
 		hasTab,
 		title,
 	} = props;
@@ -37,7 +37,7 @@ export default function FirstPostPage(props) {
 			<h1 className={style.title}>First Post</h1>
 
 			<div>
-				{`id = ${id}, hasTab=${hasTab}, title=${title}`}
+				{`type = ${type}, hasTab=${hasTab}, title=${title}`}
 			</div>
 
 			<h2>

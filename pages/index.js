@@ -59,7 +59,7 @@ function HomePage(props) {
 			<button onClick={() => {
 				onNavigate('/posts/first-post', {
 					queryProps: {
-						id: 100,
+						type: 100,
 						hasTab: true,
 						title: 'First Post from Home',
 					},
