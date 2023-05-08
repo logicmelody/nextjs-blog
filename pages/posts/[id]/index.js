@@ -12,10 +12,15 @@ import {
 import styles from './posts.module.css';
 import utilStyles from '../../../styles/utils.module.css';
 
-export default function PostPage({ postData }) {
+export default function PostPage(props) {
 	const router = useRouter();
 
-	console.log('router', router);
+	console.log('PostPage props', props);
+	console.log('PostPage router', router);
+
+	const {
+		postData,
+	} = props;
 
 	return (
 		<Layout>

@@ -24,6 +24,7 @@ export default function App({ Component, pageProps }) {
 	const ComponentElement = (
 		<Component
 			{...pageProps}
+			{...router.query}
 			onNavigate={_handleOnNavigate}
 			onBack={_handleOnBack}
 		/>

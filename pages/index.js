@@ -9,15 +9,19 @@ import { getSortedPostsData } from '../lib/posts';
 
 import utilStyles from '../styles/utils.module.css';
 
-function HomePage({
-	title = '',
-	allPostsData = [],
-	onNavigate,
-}) {
+function HomePage(props) {
 	const router = useRouter();
 
-	console.log('title', title);
-	console.log('allPostsData', allPostsData);
+	const {
+		title,
+		allPostsData,
+		onNavigate,
+	} = props;
+
+	console.log('HomePage props', props);
+	console.log('HomePage router', router);
+	console.log('HomePage title', title);
+	console.log('HomePage allPostsData', allPostsData);
 
 	return (
 		<Layout home>

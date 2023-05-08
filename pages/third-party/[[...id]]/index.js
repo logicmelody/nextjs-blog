@@ -4,10 +4,15 @@ import GameSelector from '../../../page-components/third-party/game-selector';
 
 import styles from './third-party.module.css';
 
-function ThirdPartyPage({
-	onBack,
-}) {
+function ThirdPartyPage(props) {
 	const router = useRouter();
+
+	console.log('ThirdPartyPage props', props);
+	console.log('ThirdPartyPage router', router);
+
+	const {
+		onBack,
+	} = props;
 
 	const ids = router.query.id;
 
