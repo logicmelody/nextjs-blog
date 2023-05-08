@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import LayoutRoute from '../page-components/layout-route';
 
 /*
@@ -14,7 +16,10 @@ pageProps is an object with the initial props that were preloaded for your page 
 */
 // <Component {...pageProps} /> 可以看成 {renderSwitches(routes)}
 export default function App({ Component, pageProps }) {
+	const router = useRouter();
+
 	console.log('App Component', Component);
+	console.log('App router', router);
 
 	const ComponentElement = (
 		<Component
