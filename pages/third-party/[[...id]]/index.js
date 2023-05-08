@@ -4,7 +4,9 @@ import GameSelector from '../../../page-components/third-party/game-selector';
 
 import styles from './third-party.module.css';
 
-function ThirdPartyPage() {
+function ThirdPartyPage({
+	onBack,
+}) {
 	const router = useRouter();
 
 	const ids = router.query.id;
@@ -33,6 +35,10 @@ function ThirdPartyPage() {
 			<h1>
 				Third Party Page
 			</h1>
+
+			<button onClick={onBack}>
+				回上一頁
+			</button>
 
 			<div className={styles.container}>
 				{_renderContent()}

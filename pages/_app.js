@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }) {
 		<Component
 			{...pageProps}
 			onNavigate={_handleOnNavigate}
+			onBack={_handleOnBack}
 		/>
 	);
 
@@ -37,6 +38,10 @@ export default function App({ Component, pageProps }) {
 			// 需要用 query object 來傳 data 到下一個 page
 			query: options.queryProps,
 		});
+	}
+
+	function _handleOnBack() {
+		router.back();
 	}
 
 	if (Component.isFullPage) {
