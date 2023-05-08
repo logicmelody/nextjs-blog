@@ -10,6 +10,12 @@ import style from './first-post.module.css';
 export default function FirstPostPage(props) {
 	const router = useRouter();
 
+	const {
+		id,
+		hasTab,
+		title,
+	} = props;
+
 	console.log('FirstPostPage props', props);
 	console.log('FirstPostPage router', router);
 
@@ -29,6 +35,10 @@ export default function FirstPostPage(props) {
 			/>
 
 			<h1 className={style.title}>First Post</h1>
+
+			<div>
+				{`id = ${id}, hasTab=${hasTab}, title=${title}`}
+			</div>
 
 			<h2>
 				<Link href='/'>Back to home</Link>
