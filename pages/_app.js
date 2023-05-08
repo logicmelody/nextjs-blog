@@ -24,11 +24,20 @@ export default function App({ Component, pageProps }) {
 	const ComponentElement = (
 		<Component
 			{...pageProps}
-			onNavigate={() => {
-				console.log('onNavigate');
-			}}
+			onNavigate={_handleOnNavigate}
 		/>
 	);
+
+	function _handleOnNavigate(path, options = { queryProps: {} }) {
+		console.log('App onNavigate');
+
+		router.push({
+			pathname: path,
+
+			// 需要用 query object 來傳 data 到下一個 page
+			query: options.queryProps,
+		});
+	}
 
 	if (Component.isFullPage) {
 		return Component.getLayout(ComponentElement);

@@ -12,6 +12,7 @@ import utilStyles from '../styles/utils.module.css';
 function HomePage({
 	title = '',
 	allPostsData = [],
+	onNavigate,
 }) {
 	const router = useRouter();
 
@@ -52,11 +53,8 @@ function HomePage({
 			</h2>
 
 			<button onClick={() => {
-				router.push({
-					pathname: '/posts/first-post',
-
-					// 需要用 query object 來傳 data 到下一個 page
-					query: { 
+				onNavigate('/posts/first-post', {
+					queryProps: {
 						id: 100,
 						hasTab: true,
 						title: 'First Post from Home',
