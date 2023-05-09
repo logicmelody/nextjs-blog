@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
 
-import TestProvider from '../lib/test-provider';
 import AppComponent from '../page-components/app';
+
+import TestProvider from '../lib/test-provider';
 
 /*
 根據官方文件:
