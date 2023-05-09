@@ -5,7 +5,15 @@ import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import Date from '../components/date';
 
+import { RouteKeyEnums } from '../route';
 import { getSortedPostsData } from '../lib/posts';
+
+const {
+	LOGIN,
+	POSTS,
+	POSTS_FIRST_POST,
+	THIRD_PARTY,
+} = RouteKeyEnums;
 
 import utilStyles from '../styles/utils.module.css';
 
@@ -42,7 +50,7 @@ function HomePage(props) {
 				<ul className={utilStyles.list}>
 					{allPostsData.map(({ id, date, title }) => (
 						<li className={utilStyles.listItem} key={id}>
-							<Link href={`/posts/${id}`}>{title}</Link>
+							<Link href={`${POSTS}/${id}`}>{title}</Link>
 							<br />
 							<small className={utilStyles.lightText}>
 								<Date dateString={date} />
@@ -57,7 +65,7 @@ function HomePage(props) {
 			</h2>
 
 			<button onClick={() => {
-				onNavigate('/posts/first-post', {
+				onNavigate(POSTS_FIRST_POST, {
 					queryProps: {
 						type: 100,
 						hasTab: true,
@@ -73,19 +81,19 @@ function HomePage(props) {
 			</h2>
 
 			{/* Any <Link /> in the viewport (initially or through scroll) will be prefetched by default (including the corresponding data) for pages using Static Generation. */}
-			<Link href='/login'>
+			<Link href={LOGIN}>
 				Login
 			</Link>
 
 			<br />
 
-			<Link href='/third-party'>
+			<Link href={THIRD_PARTY}>
 				Third Party
 			</Link>
 
 			<br />
 
-			<Link href={`/third-party/${1}/${2}/${3}`}>
+			<Link href={`${THIRD_PARTY}/${1}/${2}/${3}`}>
 				Third Party 1/2/3
 			</Link>
 
@@ -93,7 +101,7 @@ function HomePage(props) {
 
 			<Link
 				href={{
-					pathname: '/third-party/[...id]',
+					pathname: `${THIRD_PARTY}/[...id]`,
 					query: { id: ['99', '100'] },
 				}}
 			>
