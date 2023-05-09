@@ -40,6 +40,7 @@ export default function PostPage(props) {
 }
 
 export async function getStaticPaths() {
+	// 決定哪些 [id] 是合法的 dynamic route，如果遇到不合法的 id，會顯示 404 - Page Not Found
 	const paths = getAllPostIds();
 
 	return {
