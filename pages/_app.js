@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 
-import LayoutRoute from '../page-components/layout-route';
+import TestProvider from '../lib/test-provider';
+import AppComponent from '../page-components/app';
 
 /*
 根據官方文件:
@@ -45,13 +46,11 @@ export default function App({ Component, pageProps }) {
 		router.back();
 	}
 
-	if (Component.isFullPage) {
-		return Component.getLayout(ComponentElement);
-	}
-
 	return (
-		<LayoutRoute>
-			{ComponentElement}
-		</LayoutRoute>
+		<TestProvider>
+			<AppComponent>
+				{ComponentElement}
+			</AppComponent>
+		</TestProvider>
 	);
 }
