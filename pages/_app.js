@@ -23,15 +23,6 @@ function App({ Component, pageProps }) {
 	console.log('App Component', Component);
 	console.log('App router', router);
 
-	const ComponentElement = (
-		<Component
-			{...pageProps}
-			{...router.query}
-			onNavigate={_handleOnNavigate}
-			onBack={_handleOnBack}
-		/>
-	);
-
 	function _handleOnNavigate(path, options = { queryProps: {} }) {
 		console.log('App onNavigate');
 
@@ -50,7 +41,12 @@ function App({ Component, pageProps }) {
 	return (
 		<TestProvider>
 			<AppComponent>
-				{ComponentElement}
+				<Component
+					{...pageProps}
+					{...router.query}
+					onNavigate={_handleOnNavigate}
+					onBack={_handleOnBack}
+				/>
 			</AppComponent>
 		</TestProvider>
 	);
