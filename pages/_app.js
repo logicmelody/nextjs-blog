@@ -17,7 +17,7 @@ The Component prop is the active page, so whenever you navigate between routes, 
 pageProps is an object with the initial props that were preloaded for your page by one of our data fetching methods, otherwise it's an empty object.
 */
 // <Component {...pageProps} /> 可以看成 {renderSwitches(routes)}
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
 	const router = useRouter();
 
 	console.log('App Component', Component);
@@ -55,3 +55,5 @@ export default function App({ Component, pageProps }) {
 		</TestProvider>
 	);
 }
+
+export default App;
