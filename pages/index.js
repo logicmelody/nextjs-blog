@@ -13,6 +13,7 @@ const {
 	POSTS,
 	POSTS_FIRST_POST,
 	THIRD_PARTY,
+	LOTTERY,
 } = RouteKeyEnums;
 
 import utilStyles from '../styles/utils.module.css';
@@ -106,6 +107,18 @@ function HomePage(props) {
 				}}
 			>
 				Third Party with query 99/100
+			</Link>
+
+			<br />
+
+			<Link href={`${LOTTERY}/${11}/${22}/standard`}>
+				官方玩法
+			</Link>
+
+			<br />
+
+			<Link href={`${LOTTERY}/${13}/${25}/xinyong`}>
+				信用玩法
 			</Link>
 		</Layout>
 	);
