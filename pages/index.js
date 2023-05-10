@@ -18,6 +18,11 @@ const {
 
 import utilStyles from '../styles/utils.module.css';
 
+/*
+By default, Next.js pre-renders pages using Static Generation without fetching data. Here's an example:
+
+You should ask yourself: "Can I pre-render this page ahead of a user's request?" If the answer is yes, then you should choose Static Generation.
+*/
 function HomePage(props) {
 	const router = useRouter();
 
