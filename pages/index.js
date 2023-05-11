@@ -25,6 +25,19 @@ By default, Next.js pre-renders pages using Static Generation without fetching d
 
 You should ask yourself: "Can I pre-render this page ahead of a user's request?" If the answer is yes, then you should choose Static Generation.
 */
+
+/*
+https://nextjs.org/docs/pages/building-your-application/rendering/automatic-static-optimization
+
+During prerendering, the router's query object will be empty since we do not have query information to provide during this phase. After hydration, Next.js will trigger an update to your application to provide the route parameters in the query object.
+
+The cases where the query will be updated after hydration triggering another render are:
+
+// 簡單講就是會有 query object 產生的 page
+- The page is a dynamic-route.
+- The page has query values in the URL.
+- Rewrites are configured in your next.config.js since these can have parameters that may need to be parsed and provided in the query.
+*/
 function HomePage(props) {
 	const router = useRouter();
 
