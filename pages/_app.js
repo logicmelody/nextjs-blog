@@ -43,7 +43,7 @@ function App({ Component, pageProps }) {
 			<AppComponent>
 				<Component
 					{...pageProps}
-					{...router.query}
+					{...router.query} // TODO: 是否需要考慮 isReady
 					onNavigate={_handleOnNavigate}
 					onBack={_handleOnBack}
 				/>
