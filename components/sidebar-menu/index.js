@@ -1,5 +1,7 @@
-import styles from './sidebar-menu.module.css';
+import styles from './sidebar-menu.module.sass';
 
+// Sass example
+// https://sass-lang.com/guide
 function SidebarMenu({
 	children,
 }) {
